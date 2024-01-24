@@ -15,3 +15,13 @@ server.on("request", (request, response) => {
 server.listen(4080, "127.0.0.1", () => {
   console.log("Server has started on:", server.address());
 });
+
+// fs.writeFile("message.txt", "Hello from NodeJs", (err) => {
+//   if (err) throw err;
+//   console.log("the file has been saved!");
+// });
+
+fs.readFile("./message.txt", "utf8", (err, data) => {
+  if (err) throw err;
+  console.log(data);
+});
